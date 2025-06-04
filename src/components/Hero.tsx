@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { ChevronDown, Download, Eye, Zap, Sparkles } from 'lucide-react';
+import { ChevronDown, Download, Eye, Zap, Code, Terminal } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollToProjects = () => {
@@ -13,27 +13,26 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden gradient-bg-1">
-      {/* Animated background particles */}
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-dark-900 via-dark-800 to-dark-700 matrix-bg">
+      {/* Animated cyber particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(30)].map((_, i) => (
+        {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
-            className={`absolute w-3 h-3 rounded-full ${
-              i % 5 === 0 ? 'bg-neon-pink' :
-              i % 5 === 1 ? 'bg-neon-cyan' :
-              i % 5 === 2 ? 'bg-neon-green' :
-              i % 5 === 3 ? 'bg-neon-yellow' :
-              'bg-neon-purple'
-            }/20`}
+            className={`absolute w-1 h-1 rounded-full ${
+              i % 4 === 0 ? 'bg-neon-blue' :
+              i % 4 === 1 ? 'bg-neon-cyan' :
+              i % 4 === 2 ? 'bg-neon-purple' :
+              'bg-neon-green'
+            }/30`}
             animate={{
-              x: [0, Math.random() * 200 - 100],
-              y: [0, Math.random() * 200 - 100],
+              x: [0, Math.random() * 300 - 150],
+              y: [0, Math.random() * 300 - 150],
               opacity: [0, 1, 0],
               scale: [0, 1.5, 0],
             }}
             transition={{
-              duration: Math.random() * 5 + 5,
+              duration: Math.random() * 8 + 4,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -43,6 +42,17 @@ const Hero: React.FC = () => {
             }}
           />
         ))}
+      </div>
+
+      {/* Grid overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="w-full h-full" style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -57,11 +67,11 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-4"
+            className="mb-6"
           >
-            <span className="inline-flex items-center px-4 py-2 bg-black/20 backdrop-blur-sm rounded-full text-white font-mono text-sm border border-white/20">
-              <Sparkles className="w-4 h-4 mr-2 text-neon-yellow" />
-              Currently vibing in Nairobi ✨
+            <span className="inline-flex items-center px-6 py-3 bg-dark-800/80 backdrop-blur-sm rounded-full text-neon-blue font-mono text-sm border border-neon-blue/30 cyber-glow">
+              <Terminal className="w-4 h-4 mr-2" />
+              ~/currently-in-nairobi $
             </span>
           </motion.div>
 
@@ -71,18 +81,18 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-white mb-6"
           >
-            yo, I'm{' '}
+            I'm{' '}
             <motion.span 
-              className="gradient-text neon-text"
+              className="gradient-text cyber-text"
               animate={{ 
                 textShadow: [
-                  '0 0 20px #FF10F0',
-                  '0 0 30px #00FFFF', 
-                  '0 0 20px #39FF14',
-                  '0 0 30px #FF10F0'
+                  '0 0 20px #00D4FF',
+                  '0 0 30px #8B5CF6', 
+                  '0 0 20px #00FF88',
+                  '0 0 30px #00D4FF'
                 ]
               }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={{ duration: 3, repeat: Infinity }}
             >
               Kipchirchir
             </motion.span>
@@ -92,17 +102,17 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-2xl sm:text-3xl lg:text-4xl text-white mb-6 h-24 font-space font-medium"
+            className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 mb-6 h-24 font-space font-medium"
           >
             <TypeAnimation
               sequence={[
-                'Full-Stack Dev who codes with ✨ magic',
+                'Full-Stack Developer crafting digital experiences',
                 2500,
-                'Writer & Researcher crafting viral content 📝',
+                'Technical Writer breaking down complex systems',
                 2500,
-                'Law Student breaking barriers at UoN ⚖️',
+                'Law Student bridging code and legislation',
                 2500,
-                'Building the future, one commit at a time 🚀',
+                'Building the future with clean architecture',
                 2500,
               ]}
               wrapper="span"
@@ -116,10 +126,10 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg text-white/90 mb-8 max-w-2xl font-space leading-relaxed"
+            className="text-lg text-gray-400 mb-8 max-w-2xl font-space leading-relaxed"
           >
-            I build scalable web apps that slap 💯, craft content that goes viral 📈, 
-            and merge tech with law to create solutions that are absolutely fire 🔥
+            I architect scalable web applications, write technical documentation that developers actually read, 
+            and explore the intersection of technology and law in the digital age.
           </motion.p>
 
           <motion.div
@@ -130,60 +140,53 @@ const Hero: React.FC = () => {
           >
             <motion.button
               onClick={scrollToProjects}
-              className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white font-bold rounded-2xl shadow-2xl transition-all duration-300 hover:bg-white hover:text-purple-600 font-space"
+              className="cyber-button inline-flex items-center px-8 py-4 font-bold rounded-xl font-space scan-line"
               whileHover={{ 
                 scale: 1.05, 
-                y: -3,
-                boxShadow: "0 0 30px rgba(255, 255, 255, 0.5)"
+                y: -3
               }}
               whileTap={{ scale: 0.95 }}
-              animate={{ y: [0, -5, 0] }}
-              transition={{ 
-                y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-              }}
             >
               <Eye className="w-5 h-5 mr-2" />
-              Check My Work
-              <Zap className="w-5 h-5 ml-2" />
+              View Projects
+              <Code className="w-5 h-5 ml-2" />
             </motion.button>
             
             <motion.a
               href="/assets/resume/Kipchirchir_Too_Resume_2025.pdf"
               download
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-neon-pink to-neon-purple text-white font-bold rounded-2xl shadow-2xl transition-all duration-300 hover:from-neon-cyan hover:to-neon-green font-space neon-glow"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple text-dark-900 font-bold rounded-xl shadow-2xl transition-all duration-300 hover:from-neon-purple hover:to-neon-green font-space cyber-glow"
               whileHover={{ 
                 scale: 1.05, 
                 y: -3,
-                rotate: 2
+                rotate: 1
               }}
               whileTap={{ scale: 0.95 }}
             >
               <Download className="w-5 h-5 mr-2" />
-              Get My Resume
+              Download Resume
             </motion.a>
           </motion.div>
         </motion.div>
 
         {/* Hero Image */}
         <motion.div
-          initial={{ opacity: 0, x: 100, rotate: 10 }}
+          initial={{ opacity: 0, x: 100, rotate: 5 }}
           animate={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1, type: "spring", bounce: 0.3, delay: 0.5 }}
           className="flex justify-center lg:justify-end"
         >
           <motion.div
-            whileHover={{ scale: 1.1, rotate: 5 }}
+            whileHover={{ scale: 1.05 }}
             className="relative"
             animate={{ 
-              y: [0, -10, 0],
-              rotate: [0, 2, -2, 0]
+              y: [0, -10, 0]
             }}
             transition={{ 
-              y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-              rotate: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+              y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
             }}
           >
-            <div className="w-80 h-80 rounded-3xl overflow-hidden border-4 border-white/30 shadow-2xl backdrop-blur-sm">
+            <div className="w-80 h-80 rounded-2xl overflow-hidden border-2 border-neon-blue/50 shadow-2xl backdrop-blur-sm cyber-glow">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
                 alt="Kipchirchir Too - Professional Portrait"
@@ -191,17 +194,18 @@ const Hero: React.FC = () => {
               />
             </div>
             <motion.div
-              className="absolute -inset-6 rounded-3xl -z-10"
+              className="absolute -inset-4 rounded-2xl -z-10 border border-neon-purple/30"
               animate={{
                 background: [
-                  'conic-gradient(from 0deg, #FF10F0, #00FFFF, #39FF14, #FFFF00, #BF00FF, #FF10F0)',
-                  'conic-gradient(from 120deg, #FF10F0, #00FFFF, #39FF14, #FFFF00, #BF00FF, #FF10F0)',
-                  'conic-gradient(from 240deg, #FF10F0, #00FFFF, #39FF14, #FFFF00, #BF00FF, #FF10F0)',
-                  'conic-gradient(from 360deg, #FF10F0, #00FFFF, #39FF14, #FFFF00, #BF00FF, #FF10F0)',
+                  'linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.1), transparent)',
+                  'linear-gradient(135deg, transparent, rgba(139, 92, 246, 0.1), transparent)',
+                  'linear-gradient(225deg, transparent, rgba(0, 255, 136, 0.1), transparent)',
+                  'linear-gradient(315deg, transparent, rgba(0, 212, 255, 0.1), transparent)',
                 ],
+                rotate: [0, 90, 180, 270, 360]
               }}
               transition={{
-                duration: 4,
+                duration: 8,
                 repeat: Infinity,
                 ease: "linear",
               }}
@@ -213,10 +217,10 @@ const Hero: React.FC = () => {
       {/* Scroll indicator */}
       <motion.button
         onClick={scrollToProjects}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white bg-white/20 backdrop-blur-sm rounded-full p-3 border border-white/30"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-neon-blue bg-dark-800/80 backdrop-blur-sm rounded-full p-4 border border-neon-blue/30 cyber-glow"
         animate={{ 
           y: [0, 15, 0],
-          scale: [1, 1.1, 1]
+          opacity: [0.7, 1, 0.7]
         }}
         transition={{ 
           duration: 2, 
