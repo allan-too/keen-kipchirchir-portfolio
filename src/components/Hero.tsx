@@ -188,7 +188,7 @@ const Hero: React.FC = () => {
           >
             <div className="w-80 h-80 rounded-2xl overflow-hidden border-2 border-neon-blue/50 shadow-2xl backdrop-blur-sm cyber-glow">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                src="/lovable-uploads/f7010da2-aa38-47ed-90d0-1f9a639a85ba.png"
                 alt="Kipchirchir Too - Professional Portrait"
                 className="w-full h-full object-cover"
               />
