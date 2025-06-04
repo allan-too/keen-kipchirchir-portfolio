@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon, Terminal } from 'lucide-react';
+import { Switch } from '@/components/ui/switch';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation: React.FC = () => {
@@ -64,37 +65,21 @@ const Navigation: React.FC = () => {
 
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <motion.button
-              onClick={toggleTheme}
-              className="p-3 rounded-full bg-dark-800 border border-neon-blue/30 text-neon-blue hover:bg-neon-blue hover:text-dark-900 transition-all duration-300 cyber-glow"
-              whileHover={{ scale: 1.1, rotate: 180 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Toggle Dark/Light Mode"
+            <motion.div
+              className="flex items-center space-x-3 p-3 rounded-full bg-dark-800 border border-neon-blue/30 cyber-glow"
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
             >
-              <AnimatePresence mode="wait">
-                {theme === 'light' ? (
-                  <motion.div
-                    key="sun"
-                    initial={{ rotate: -180, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 180, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Sun className="w-5 h-5" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="moon"
-                    initial={{ rotate: 180, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -180, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Moon className="w-5 h-5" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+              <Sun className="w-4 h-4 text-neon-blue" />
+              <Switch
+                checked={theme === 'dark'}
+                onCheckedChange={toggleTheme}
+                className="data-[state=checked]:bg-neon-blue data-[state=unchecked]:bg-gray-600"
+              />
+              <Moon className="w-4 h-4 text-neon-purple" />
+            </motion.div>
 
             {/* Mobile menu button */}
             <div className="lg:hidden">
