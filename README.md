@@ -1,73 +1,185 @@
-# Welcome to your Lovable project
 
-## Project info
+# Kipchirchir Too Portfolio
 
-**URL**: https://lovable.dev/projects/6367f0a0-88b3-494a-9b04-ea928f18d4a9
+A modern, responsive portfolio website showcasing my work as a Full-Stack Software Engineer, Writer & Researcher, and Law Student. Built with React, Vite, and Tailwind CSS with beautiful animations and dark/light theme support.
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Responsive Design**: Mobile-first approach, perfect on all devices (320px to 1920px+)
+- **Dark/Light Theme**: Smooth theme switching with persistent preference
+- **Smooth Animations**: Framer Motion powered animations and micro-interactions
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
+- **Fast Performance**: Vite for lightning-fast development and builds
+- **Modern Tech Stack**: React 18, TypeScript, Tailwind CSS, Framer Motion
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6367f0a0-88b3-494a-9b04-ea928f18d4a9) and start prompting.
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Typewriter Effect**: React Type Animation
+- **Notifications**: Sonner
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📁 Project Structure
 
-**Use your preferred IDE**
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Navigation.tsx   # Main navigation with mobile menu
+│   ├── Hero.tsx         # Hero section with typewriter effect
+│   ├── Projects.tsx     # Projects showcase
+│   ├── ProjectCard.tsx  # Individual project cards
+│   ├── Writing.tsx      # Writing & research section
+│   ├── WritingCard.tsx  # Individual writing sample cards
+│   ├── Legal.tsx        # Legal expertise section
+│   ├── Resume.tsx       # Resume section
+│   ├── Contact.tsx      # Contact form
+│   └── Footer.tsx       # Site footer
+├── contexts/            # React contexts
+│   └── ThemeContext.tsx # Dark/light theme management
+├── data/                # Static data
+│   ├── projects.ts      # Project information
+│   └── writing.ts       # Writing samples data
+├── pages/               # Page components
+│   └── Index.tsx        # Main landing page
+└── assets/              # Static assets (images, PDFs)
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (v16 or higher)
+- npm or yarn
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd kipchirchir-too-portfolio
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The built files will be in the `dist/` directory.
 
-## What technologies are used for this project?
+### Preview Production Build
 
-This project is built with:
+```bash
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🌐 Deployment
 
-## How can I deploy this project?
+This project is optimized for deployment on:
 
-Simply open [Lovable](https://lovable.dev/projects/6367f0a0-88b3-494a-9b04-ea928f18d4a9) and click on Share -> Publish.
+- **Vercel**: Connect your GitHub repo for automatic deployments
+- **Netlify**: Drag and drop the `dist` folder or connect via Git
+- **GitHub Pages**: Use the built files from the `dist` directory
 
-## Can I connect a custom domain to my Lovable project?
+### Deploy to Vercel
 
-Yes, you can!
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will automatically detect it's a Vite project and deploy
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Deploy to Netlify
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Run `npm run build`
+2. Drag the `dist` folder to Netlify's deploy area
+3. Or connect your Git repository for continuous deployment
+
+## 📝 Content Management
+
+### Adding New Projects
+
+Edit `src/data/projects.ts` to add new projects. Each project should include:
+
+- Title, role, and description
+- Tech stack array
+- Key features list
+- Links (GitHub, live demo)
+- Project image URL
+
+### Adding Writing Samples
+
+Edit `src/data/writing.ts` to add new articles, whitepapers, or legal documents:
+
+- Category (blog, whitepaper, case-study, legal)
+- Title and description
+- Tags and word count
+- Links or download URLs
+- Preview image
+
+### Updating Personal Information
+
+Personal details are scattered throughout components. Key locations:
+
+- `src/components/Hero.tsx` - Main introduction
+- `src/components/Footer.tsx` - Social links
+- `src/components/Contact.tsx` - Contact information
+- `src/components/Resume.tsx` - Resume preview
+
+## 🎨 Customization
+
+### Theme Colors
+
+The site uses a blue accent color scheme. To change:
+
+1. Update `tailwind.config.ts` for custom colors
+2. Modify gradient classes in components
+3. Update theme context in `src/contexts/ThemeContext.tsx`
+
+### Animations
+
+Animations are handled by Framer Motion. Key animation patterns:
+
+- **Page entry**: `initial={{ opacity: 0, y: 50 }}` → `animate={{ opacity: 1, y: 0 }}`
+- **Hover effects**: `whileHover={{ scale: 1.05, y: -2 }}`
+- **Scroll triggers**: `whileInView` with `viewport={{ once: true }}`
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: 320px - 767px
+- **Tablet**: 768px - 1023px
+- **Desktop**: 1024px+
+
+## 🔧 Performance Optimizations
+
+- Lazy loading for images
+- Code splitting with dynamic imports
+- Optimized bundle size with Vite
+- Efficient re-renders with React best practices
+
+## 📄 License
+
+MIT License - feel free to use this code for your own portfolio!
+
+## 📞 Contact
+
+- **Email**: kipchirchirtoo01@gmail.com
+- **LinkedIn**: [linkedin.com/in/kipchirchirtoo](https://www.linkedin.com/in/kipchirchirtoo)
+- **GitHub**: [github.com/allan-too](https://github.com/allan-too)
+
+---
+
+Built with ❤️ by Kipchirchir Too in Nairobi, Kenya
