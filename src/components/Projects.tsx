@@ -6,36 +6,72 @@ import { projects } from '../data/projects';
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-gradient-to-br from-aesthetic-lavender/30 via-aesthetic-mint/20 to-aesthetic-peach/30 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <motion.div
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-neon-pink/20 to-neon-purple/20 backdrop-blur-sm rounded-full mb-6"
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <span className="text-2xl mr-2">💻</span>
+            <span className="font-mono text-sm text-gray-600 dark:text-gray-400">
+              // my coding journey
+            </span>
+          </motion.div>
+
+          <h2 className="text-5xl md:text-6xl font-display font-bold gradient-text mb-6">
             Software Projects
             <motion.div
-              className="h-1 w-24 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4"
+              className="h-2 w-32 bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-green mx-auto mt-4 rounded-full"
               initial={{ width: 0 }}
-              whileInView={{ width: 96 }}
+              whileInView={{ width: 128 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 1.2, delay: 0.3 }}
             />
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Since 2022, I've developed full-stack applications, AI-powered tools, and SaaS platforms 
-            that solve real-world problems. Below are my top 5 projects.
-          </p>
+          <motion.p 
+            className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-space leading-relaxed"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            Since 2022, I've been crafting full-stack applications, AI-powered tools, and SaaS platforms 
+            that absolutely <span className="gradient-text font-bold">slap different</span> 🔥. 
+            Check out my top 5 projects that are making waves.
+          </motion.p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div 
+          className="grid md:grid-cols-2 gap-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 100, rotate: 5 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.2,
+                type: "spring",
+                bounce: 0.4
+              }}
+            >
+              <ProjectCard project={project} index={index} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
