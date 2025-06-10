@@ -8,7 +8,7 @@ const Legal: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "Kipchirchir's research on cross-border data transfers was instrumental in our firm's compliance workshop.",
+      quote: "Paul's research on cross-border data transfers was instrumental in our firm's compliance workshop.",
       author: "Advocate Jane Mwangi",
       position: "XYZ Law Chambers"
     },
@@ -18,7 +18,7 @@ const Legal: React.FC = () => {
       position: "University of Nairobi Law Faculty"
     },
     {
-      quote: "The legal tech insights provided by Kipchirchir have been invaluable for our digital transformation.",
+      quote: "The legal tech insights provided by Paul have been invaluable for our digital transformation.",
       author: "Dr. Grace Kiprotich",
       position: "Legal Innovation Hub"
     }

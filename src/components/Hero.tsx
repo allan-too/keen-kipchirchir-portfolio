@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
           >
             <span className="inline-flex items-center px-6 py-3 bg-dark-800/80 backdrop-blur-sm rounded-full text-neon-blue font-mono text-sm border border-neon-blue/30 cyber-glow">
               <Terminal className="w-4 h-4 mr-2" />
-              ~/currently-in-nairobi $
+              ~/status/online $
             </span>
           </motion.div>
 
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
               }}
               transition={{ duration: 3, repeat: Infinity }}
             >
-              Kipchirchir
+              Paul Serban
             </motion.span>
           </motion.h1>
 
@@ -106,14 +106,16 @@ const Hero: React.FC = () => {
           >
             <TypeAnimation
               sequence={[
-                'Full-Stack Developer crafting digital experiences',
+                'Software Engineer at SparkWave Technologies',
                 2500,
-                'Technical Writer breaking down complex systems',
+                'Developing RESTful APIs with Python & FastAPI',
                 2500,
-                'Law Student bridging code and legislation',
+                'Monthly Columnist for Code & Craft Magazine',
                 2500,
-                'Building the future with clean architecture',
+                'Cloud engineering with AWS and Terraform',
                 2500,
+                'Bridging the gap between code and storytelling',
+                2500
               ]}
               wrapper="span"
               speed={50}
@@ -128,8 +130,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg text-gray-400 mb-8 max-w-2xl font-space leading-relaxed"
           >
-            I architect scalable web applications, write technical documentation that developers actually read, 
-            and explore the intersection of technology and law in the digital age.
+            A Software Engineer with experience in backend development, cloud infrastructure, and CI/CD. I build scalable applications and write engaging technical content. Currently developing real-time analytics platforms at SparkWave Technologies in Austin, TX.
           </motion.p>
 
           <motion.div
@@ -153,7 +154,7 @@ const Hero: React.FC = () => {
             </motion.button>
             
             <motion.a
-              href="/assets/resume/Kipchirchir_Too_Resume_2025.pdf"
+              href="/assets/resume/Paul_Serban_Resume.pdf"
               download
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple text-dark-900 font-bold rounded-xl shadow-2xl transition-all duration-300 hover:from-neon-purple hover:to-neon-green font-space cyber-glow"
               whileHover={{ 
@@ -189,7 +190,7 @@ const Hero: React.FC = () => {
             <div className="w-80 h-80 rounded-2xl overflow-hidden border-2 border-neon-blue/50 shadow-2xl backdrop-blur-sm cyber-glow">
               <img
                 src="/lovable-uploads/f7010da2-aa38-47ed-90d0-1f9a639a85ba.png"
-                alt="Kipchirchir Too - Professional Portrait"
+                alt="Paul Serban - Professional Portrait"
                 className="w-full h-full object-cover"
               />
             </div>

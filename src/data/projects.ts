@@ -29,7 +29,7 @@ export const projects: Project[] = [
     ],
     metrics: 'Reduced reservation processing time by 50%',
     links: {
-      github: 'https://github.com/allan-too/kilanflux-backend',
+      github: 'https://github.com/paul-serban/kilanflux-backend',
       live: 'https://kilanflux-demo.vercel.app'
     },
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop'
@@ -46,7 +46,7 @@ export const projects: Project[] = [
       '14-day Free Trial & Stripe Billing Integration'
     ],
     links: {
-      github: 'https://github.com/allan-too/kilan-crm',
+      github: 'https://github.com/paul-serban/kilan-crm',
       live: 'https://kilan-crm-demo.vercel.app'
     },
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop'
@@ -63,7 +63,7 @@ export const projects: Project[] = [
       'Real-Time Status Updates via WebSockets'
     ],
     links: {
-      github: 'https://github.com/allan-too/ai-email-outreach',
+      github: 'https://github.com/paul-serban/ai-email-outreach',
       demo: 'ai-email-demo.gif'
     },
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop'
@@ -80,7 +80,7 @@ export const projects: Project[] = [
       'Mobile-Responsive for Kenyan Farmers'
     ],
     links: {
-      github: 'https://github.com/allan-too/coffeeconnect',
+      github: 'https://github.com/paul-serban/coffeeconnect',
       live: 'https://coffeeconnect-demo.vercel.app'
     },
     image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&h=400&fit=crop'
@@ -97,7 +97,7 @@ export const projects: Project[] = [
       'Order Tracking UI with Real-Time Updates'
     ],
     links: {
-      github: 'https://github.com/allan-too/glovo-clone',
+      github: 'https://github.com/paul-serban/glovo-clone',
       live: 'https://fooddeliverydemo.vercel.app'
     },
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop'

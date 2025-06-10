@@ -9,12 +9,12 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com/allan-too',
+      url: 'https://github.com/paul-serban', // Placeholder
       icon: Github,
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/kipchirchirtoo',
+      url: 'https://www.linkedin.com/in/paulserban', // Placeholder
       icon: () => (
         <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
           <span className="text-white text-xs font-bold">in</span>
@@ -22,17 +22,8 @@ const Footer: React.FC = () => {
       ),
     },
     {
-      name: 'Medium',
-      url: 'https://medium.com/@kipchirchirtoo',
-      icon: () => (
-        <div className="w-6 h-6 bg-gray-900 dark:bg-white rounded-full flex items-center justify-center">
-          <span className="text-white dark:text-gray-900 text-xs font-bold">M</span>
-        </div>
-      ),
-    },
-    {
       name: 'Email',
-      url: 'mailto:kipchirchirtoo01@gmail.com',
+      url: 'mailto:paulserban4321@gmail.com',
       icon: Mail,
     },
   ];
@@ -115,10 +106,10 @@ const Footer: React.FC = () => {
             className="text-center text-gray-400"
           >
             <p className="flex items-center justify-center space-x-2">
-              <span>© {currentYear} Kipchirchir Too. All Rights Reserved.</span>
+              <span>© {currentYear} Paul Serban • Austin, TX</span>
               <span>•</span>
               <span className="flex items-center">
-                Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> in Nairobi
+                Made with <Heart className="w-4 h-4 mx-1 text-red-500" />
               </span>
             </p>
           </motion.div>

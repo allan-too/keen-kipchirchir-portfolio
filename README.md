@@ -1,5 +1,5 @@
 
-# Kipchirchir Too Portfolio
+# Paul Serban's Portfolio
 
 A modern, responsive portfolio website showcasing my work as a Full-Stack Software Engineer, Writer & Researcher, and Law Student. Built with React, Vite, and Tailwind CSS with beautiful animations and dark/light theme support.
 
@@ -59,7 +59,7 @@ src/
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd kipchirchir-too-portfolio
+cd keen-kipchirchir-portfolio
 ```
 
 2. Install dependencies:
@@ -176,10 +176,10 @@ MIT License - feel free to use this code for your own portfolio!
 
 ## 📞 Contact
 
-- **Email**: kipchirchirtoo01@gmail.com
-- **LinkedIn**: [linkedin.com/in/kipchirchirtoo](https://www.linkedin.com/in/kipchirchirtoo)
-- **GitHub**: [github.com/allan-too](https://github.com/allan-too)
+- **Email**: paul.serban@email.com
+- **LinkedIn**: [linkedin.com/in/paulserban](https://www.linkedin.com/in/paulserban)
+- **GitHub**: [github.com/paul-serban](https://github.com/paul-serban)
 
 ---
 
-Built with ❤️ by Kipchirchir Too in Nairobi, Kenya
+Built with ❤️ by Paul Serban in Austin, TX

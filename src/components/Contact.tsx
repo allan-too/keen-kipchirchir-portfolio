@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageCircle, Send, CheckCircle, Github } from 'lucide-react';
+import { Mail, MessageCircle, Send, CheckCircle, Github, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Contact: React.FC = () => {
@@ -53,8 +53,7 @@ const Contact: React.FC = () => {
             />
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Whether you need a full-stack developer, legal researcher, or content strategist, 
-            I'd love to collaborate. Drop me a message below—responses within 24 hours.
+            Whether you need a software engineer or a writer, I'd love to collaborate. Drop me a message below—responses within 24 hours.
           </p>
         </motion.div>
 
@@ -180,7 +179,7 @@ const Contact: React.FC = () => {
 
               <div className="space-y-6">
                 <motion.a
-                  href="mailto:kipchirchirtoo01@gmail.com"
+                  href="mailto:paulserban4321@gmail.com"
                   className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors group"
                   whileHover={{ scale: 1.02 }}
                 >
@@ -189,12 +188,26 @@ const Contact: React.FC = () => {
                     <p className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Email
                     </p>
-                    <p className="text-gray-600 dark:text-gray-400">kipchirchirtoo01@gmail.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">paulserban4321@gmail.com</p>
                   </div>
                 </motion.a>
 
                 <motion.a
-                  href="https://www.linkedin.com/in/kipchirchirtoo"
+                  href="tel:512-555-1234"
+                  className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors group"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4" />
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      Phone
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400">(512) 555-1234</p>
+                  </div>
+                </motion.a>
+
+                <motion.a
+                  href="https://www.linkedin.com/in/paulserban"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors group"
@@ -207,12 +220,12 @@ const Contact: React.FC = () => {
                     <p className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       LinkedIn
                     </p>
-                    <p className="text-gray-600 dark:text-gray-400">linkedin.com/in/kipchirchirtoo</p>
+                    <p className="text-gray-600 dark:text-gray-400">linkedin.com/in/paulserban</p>
                   </div>
                 </motion.a>
 
                 <motion.a
-                  href="https://github.com/allan-too"
+                  href="https://github.com/paul-serban"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors group"
@@ -223,7 +236,7 @@ const Contact: React.FC = () => {
                     <p className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       GitHub
                     </p>
-                    <p className="text-gray-600 dark:text-gray-400">github.com/allan-too</p>
+                    <p className="text-gray-600 dark:text-gray-400">github.com/paul-serban</p>
                   </div>
                 </motion.a>
               </div>
